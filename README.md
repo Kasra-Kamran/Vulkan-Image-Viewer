@@ -16,7 +16,9 @@ Make sure to run the project from the root folder and not from bin, since the pr
 
 ## Dependencies
 Qt6
+
 cmake
+
 A C++20 capable compiler
 
 ---
