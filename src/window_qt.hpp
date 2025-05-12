@@ -23,7 +23,7 @@
 struct TextureFrame
 {
     int x, y, w, h;
-    TextureFrame calcNew(const glm::mat4& t, int width, int height)
+    void calcNew(const glm::mat4& t, int width, int height)
     {
         glm::vec4 top_left{-1, -1, 0, 1};
         glm::vec4 bottom_right{1, 1, 0, 1};
