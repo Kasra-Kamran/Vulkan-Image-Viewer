@@ -3,7 +3,7 @@
 
 This is an image viewer, built with Vulkan and Qt6.
 
-To build and follow these steps:
+To build and run follow these steps:
 ```
 git clone --recurse-submodules REPO_URL
 cd REPO_FOLDER
