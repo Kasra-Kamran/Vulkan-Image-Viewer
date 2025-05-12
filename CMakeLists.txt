@@ -2,7 +2,7 @@ Project(VulkanImageViewer)
 
 cmake_minimum_required(VERSION 3.10)
 
-add_compile_options(-O3)
+add_compile_options(-O0)
 file(GLOB SRC CONFIGURE_DEPENDS "src/*.cpp")
 
 set(CMAKE_CXX_STANDARD 20)

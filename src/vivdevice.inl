@@ -152,7 +152,6 @@ VkImage VIVDevice<T>::createTextureImage(const std::string& image_name)
     unsigned char* image_data = stbi_load(image_name.c_str(), &x, &y, &n, STBI_rgb_alpha);
 
     VkDeviceSize image_size = x * y * 4;
-    std::cout << x << " " << y << "\n";
 
     if(!image_data)
         throw std::runtime_error("image load failed.");
@@ -642,20 +641,20 @@ template <typename T>
 void VIVDevice<T>::copyBufferToImage(VkBuffer buffer, VkImage image, uint32_t width, uint32_t height, uint32_t layerCount)
 {
     VkCommandBuffer commandBuffer = beginSingleTimeCommands();
-    
+
     VkBufferImageCopy region{};
     region.bufferOffset = 0;
     region.bufferRowLength = 0;
     region.bufferImageHeight = 0;
-    
+
     region.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
     region.imageSubresource.mipLevel = 0;
     region.imageSubresource.baseArrayLayer = 0;
     region.imageSubresource.layerCount = layerCount;
-    
+
     region.imageOffset = {0, 0, 0};
     region.imageExtent = {width, height, 1};
-    
+
     vkCmdCopyBufferToImage(
         commandBuffer,
         buffer,
