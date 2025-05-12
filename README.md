@@ -5,8 +5,8 @@ This is an image viewer, built with Vulkan and Qt6.
 
 To build and run follow these steps:
 ```
-git clone --recurse-submodules REPO_URL
-cd REPO_FOLDER
+git clone --recurse-submodules https://github.com/Kasra-Kamran/Vulkan-Image-Viewer.git
+cd Vulkan-Image-Viewer
 cmake . .
 make
 ./bin/main
