@@ -21,6 +21,8 @@ cmake
 
 A C++20 capable compiler
 
+Python3
+
 ---
 
-The project has to be built with -O0, since any compiler optimization causes the program to crash for some reason.
+If cmake doesn't find your Qt installation directory, you can manually set it using -DCMAKE_PREFIX_PATH (e.g. -DCMAKE_PREFIX_PATH=C:\Qt\6.9.0\msvc2022_64)
