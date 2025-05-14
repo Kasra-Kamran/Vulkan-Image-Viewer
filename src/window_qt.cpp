@@ -17,7 +17,7 @@ VIVqtWindow::VIVqtWindow(int w, int h, const string& name)
     _window.setWindowTitle(name.c_str());
     _surface_wrapper = QWidget::createWindowContainer(&_drawing_surface, &_window, Qt::FramelessWindowHint);
     _event_handler_main_window.emplace(&_window);
-    _event_handler_drawing_surface.emplace(&_drawing_surface);
+    _event_handler_drawing_surface.emplace(&_window);
     _texture_frame = TextureFrame{0, 0, w, h};
 
     register_handlers();
