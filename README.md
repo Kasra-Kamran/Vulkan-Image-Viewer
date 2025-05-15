@@ -26,3 +26,4 @@ Python3
 ---
 
 If cmake doesn't find your Qt installation directory, you can manually set it using -DCMAKE_PREFIX_PATH (e.g. -DCMAKE_PREFIX_PATH=C:\Qt\6.9.0\msvc2022_64)
+On windows you might also need to add the the qt library directory (where the .dll files are) to your LIB environment variable.
