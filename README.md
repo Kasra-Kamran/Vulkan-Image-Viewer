@@ -3,16 +3,13 @@
 
 This is an image viewer, built with Vulkan and Qt6.
 
-To build and run follow these steps:
+To build follow these steps:
 ```
 git clone --recurse-submodules https://github.com/Kasra-Kamran/Vulkan-Image-Viewer.git
 cd Vulkan-Image-Viewer
 cmake . .
-make
-./bin/main
+cmake --build .
 ```
-
-Make sure to run the project from the root folder and not from bin, since the project will look for shaders in a subfolder named shaders from wherever you run the project.
 
 ## Dependencies
 Qt6
