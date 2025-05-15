@@ -42,7 +42,7 @@ void VulkanImageViewer<T>::createPipeline()
     auto pipelineConfig = VIVPipeline<T>::defaultPipelineConfigInfo(_swapchain->width(), _swapchain->height());
     pipelineConfig.renderPass = _swapchain->getRenderPass();
     pipelineConfig.pipelineLayout = _pipeline_layout;
-    _pipeline.emplace(*_device, "./shaders/first.vert.spir", "./shaders/first.fragment.spir", pipelineConfig);
+    _pipeline.emplace(*_device, SHADERS_DIR "first.vert.spir", SHADERS_DIR "first.fragment.spir", pipelineConfig);
 }
 
 
