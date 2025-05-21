@@ -176,7 +176,7 @@ VkImage VIVDevice<T>::createTextureImage(const std::string& image_name)
     createImage(x, y, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, image, texture_image_memory);
 
     transitionImageLayout(image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
-    copyBufferToImage(staging_buffer, image, static_cast<uint32_t>(x), static_cast<uint32_t>(y), 4);
+    copyBufferToImage(staging_buffer, image, static_cast<uint32_t>(x), static_cast<uint32_t>(y), 1);
     transitionImageLayout(image, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
 
     vkDestroyBuffer(_device, staging_buffer, nullptr);
